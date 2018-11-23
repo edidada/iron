@@ -13,14 +13,19 @@ rustc 1.23.0 (766bd11c8 2018-01-01)
 cargo -V
 cargo 0.24.0 (45043115c 2017-12-05)
 
+rustup -V
+rustup 1.14.0 (1e51b07cc 2018-10-04)
+
 
 $HOME/.cargo/config内容如下：
 
+```shell
 [source.crates-io]
 registry = "https://github.com/rust-lang/crates.io-index"
 replace-with = 'ustc'
 [source.ustc]
 registry = "git://mirrors.ustc.edu.cn/crates.io-index"
+```
 
 
 idea clion version 2018.2
