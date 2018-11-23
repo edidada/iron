@@ -27,5 +27,5 @@ idea clion version 2018.2
 
 rust plugin version 0.2.0.20
 
-
+操作，在项目对应的文件夹下运行“cargo run”。
 打开浏览器访问 http://localhost:3000/ 显示：This Is Rust Http Server
