@@ -1,13 +1,23 @@
-extern crate iron;
+//extern crate iron;
+//
+//use iron::prelude::*;
+//use iron::status;
 
-use iron::prelude::*;
-use iron::status;
+enum Direction {
+    East,
+    West,
+    North,
+    South,
+}
 
 fn main() {
-    fn hello_world(_: &mut Request) -> IronResult<Response> {
-        Ok(Response::with((status::Ok, "This Is Rust Http Server")))
-    }
-
-    let _server = Iron::new(hello_world).http("127.0.0.1:11000").unwrap();
+    let dire = Direction::South;
+    match dire {
+        Direction::East => println!("East"),
+        Direction::North | Direction::South => {
+            println!("South or North");
+        },
+        _ => println!("West"),
+    };
 }
 

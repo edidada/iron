@@ -1,9 +1,4 @@
-enum Direction {
-    East,
-    West,
-    North,
-    South,
-}
+
 
 fn testiron(){
     fn hello_world(_: &mut Request) -> IronResult<Response> {
@@ -12,7 +7,12 @@ fn testiron(){
 
     let _server = Iron::new(hello_world).http("127.0.0.1:11000").unwrap();
 }
-
+enum Direction {
+    East,
+    West,
+    North,
+    South,
+}
 fn testenum() {
     let dire = Direction::South;
     match dire {
