@@ -109,3 +109,5 @@ String 是一个带有的 vec:Vec<u8> 成员的结构体，你可以理解为 st
 iron-0.6.0
 
 cargo install 是把可执行文件复制到cargo/bin文件夹下面
+
+(rust使用外部函数)[https://blog.csdn.net/teamlet/article/details/50923682]
