@@ -110,4 +110,9 @@ iron-0.6.0
 
 cargo install 是把可执行文件复制到cargo/bin文件夹下面
 
-(rust使用外部函数)[https://blog.csdn.net/teamlet/article/details/50923682]
+[rust使用外部函数](https://blog.csdn.net/teamlet/article/details/50923682)
+
+```shell
+git remote add
+git remote remove
+```
