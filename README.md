@@ -115,3 +115,5 @@ cargo install 是把可执行文件复制到cargo/bin文件夹下面
 [rust使用外部函数](https://blog.csdn.net/teamlet/article/details/50923682)
 
 iron依赖hyper
+
+[rust doc](https://doc.rust-lang.org/rustc/what-is-rustc.html)
