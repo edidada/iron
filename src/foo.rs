@@ -1,20 +1,11 @@
 
-
-fn testiron(){
-    fn hello_world(_: &mut Request) -> IronResult<Response> {
-        Ok(Response::with((status::Ok, "This Is Rust Http Server")))
-    }
-
-    let _server = Iron::new(hello_world).http("127.0.0.1:3000").unwrap();
-}
-
 enum Direction {
     East,
     West,
     North,
     South,
 }
-fn testenum() {
+pub fn testenum() {
     let dire = Direction::South;
     match dire {
         Direction::East => println!("East"),
@@ -30,7 +21,7 @@ fn test(){
 
 }
 
-fn testprint() {
+pub fn testprint() {
     println!("hello, world");
 }
 
@@ -97,7 +88,7 @@ fn tests(){
     let zero = z.abs_sub(123.4);
     let bin = 0b1111_0000;
     let oct = 0o7320_1546;
-    let hex = 0xf23a_b049;
+    let hex = 0x7320_1511;
 
 // string types
     let str = "Hello, world!";
