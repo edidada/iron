@@ -5,8 +5,9 @@ fn testiron(){
         Ok(Response::with((status::Ok, "This Is Rust Http Server")))
     }
 
-    let _server = Iron::new(hello_world).http("127.0.0.1:11000").unwrap();
+    let _server = Iron::new(hello_world).http("127.0.0.1:3000").unwrap();
 }
+
 enum Direction {
     East,
     West,

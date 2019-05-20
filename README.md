@@ -6,6 +6,7 @@
 
 Linux edidada 4.13.0-32-generic #35~16.04.1-Ubuntu SMP Thu Jan 25 10:13:43 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
 
+```shell
 
 rustc -V
 rustc 1.23.0 (766bd11c8 2018-01-01)
@@ -16,6 +17,7 @@ cargo 0.24.0 (45043115c 2017-12-05)
 rustup -V
 rustup 1.14.0 (1e51b07cc 2018-10-04)
 
+```
 
 $HOME/.cargo/config内容如下：
 
@@ -112,7 +114,3 @@ cargo install 是把可执行文件复制到cargo/bin文件夹下面
 
 [rust使用外部函数](https://blog.csdn.net/teamlet/article/details/50923682)
 
-```shell
-git remote add
-git remote remove
-```
