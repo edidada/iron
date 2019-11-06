@@ -1,6 +1,8 @@
 # iron
 
 
+[Rust Crates 镜像使用帮助](https://lug.ustc.edu.cn/wiki/mirrors/help/rust-crates)
+
 官方示例
 
 
@@ -17,6 +19,9 @@ cargo 0.24.0 (45043115c 2017-12-05)
 rustup -V
 rustup 1.14.0 (1e51b07cc 2018-10-04)
 
+
+cargo test
+cargo doc
 ```
 
 $HOME/.cargo/config内容如下：
