@@ -7,3 +7,5 @@ authors = ["sandisks <sandisks555@gmail.com>"]
 iron = "0.6.*"
 time = "0.1.40"
 #mysql_async = "0.19.0"
+rustc-serialize = "*"
+router = "*"
