@@ -4,7 +4,7 @@ use iron::prelude::*;
 use iron::status;
 
 
-pub fn testiron(){
+pub fn testiron_method(){
     fn mian_page(_: &mut Request) -> IronResult<Response> {
         Ok(Response::with((status::Ok, "This Is Rust Http Server")))
     }

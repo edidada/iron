@@ -1,8 +1,15 @@
+mod hserver;
+use hserver::testironfile;
 
-mod foo;
+mod methodsee;//引用foo.rs文件
 
 fn main() {
-    foo::testprint();
+
+    //非pub的函数，在其他模块应用不了
+    methodsee::testprint();
+    methodsee::testenum();
+
+    testironfile::testiron_method();
 }
 
 //extern crate iron;
