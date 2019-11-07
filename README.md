@@ -1,5 +1,6 @@
 # iron
 
+[](https://dev.kriry.com/www/rust/std/)
 
 [Rust Crates 镜像使用帮助](https://lug.ustc.edu.cn/wiki/mirrors/help/rust-crates)
 
@@ -124,3 +125,15 @@ cargo install 是把可执行文件复制到cargo/bin文件夹下面
 iron依赖hyper
 
 [rust doc](https://doc.rust-lang.org/rustc/what-is-rustc.html)
+
+切片只能通过某种指针来处理，因此有多种形式，例如：
+&[T] - 共享切片
+&mut [T] - 可变切片
+Box<[T]> - 拥有切片
+
+pub	使其可见
+
+
+https://rustwiki.org/zh-CN/rust-by-example/mod/visibility.html
+
+
