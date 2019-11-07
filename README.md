@@ -136,4 +136,7 @@ pub	使其可见
 
 https://rustwiki.org/zh-CN/rust-by-example/mod/visibility.html
 
+https://github.com/rust-lang/book
+
+'cargo test --test integration_test'
 

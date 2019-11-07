@@ -1,4 +1,5 @@
-use adder;
+//use adders;
+extern crate adder;
 
 #[test]
 fn it_adds_two() {

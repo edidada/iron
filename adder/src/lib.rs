@@ -58,4 +58,53 @@ fn  function            (i: i32) -> i32 { i + 1 }
     fn it_works() {
         assert_eq!(2 + 2, 4);
     }
+
+    #[test]
+    fn test_vector(){
+        let vs: Vec<i32> = Vec::new();
+
+        let vv = vec![1, 2, 3];
+
+
+        let mut aaaaaaaaaaaaaaa = Vec::new();
+
+        aaaaaaaaaaaaaaa.push(5);
+        aaaaaaaaaaaaaaa.push(6);
+        aaaaaaaaaaaaaaa.push(7);
+        aaaaaaaaaaaaaaa.push(8);
+
+
+
+        let first = &vv[0];
+
+//        vv.push(6);
+
+        println!("The first element is: {}", first);
+    }
+
+    #[test]
+    fn test_ve2(){
+        let aaaaaaa = vec![1, 2, 3, 4, 5];
+
+        let third: &i32 = &aaaaaaa[2];
+        println!("The third element is {}", third);
+
+        match aaaaaaa.get(2) {
+            Some(third) => println!("The third element is {}", third),
+            None => println!("There is no third element."),
+        }
+
+
+    }
+
+    #[test]
+    fn test_vvvvv(){
+        let aaaaaaaaa = vec![1, 2, 3, 4, 5];
+
+        let does_not_exist = &aaaaaaaaa[100];
+        let does_not_exist = aaaaaaaaa.get(100);
+
+
+
+    }
 }
