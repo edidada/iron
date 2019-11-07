@@ -1,3 +1,5 @@
+extern crate iron;
+
 mod hserver;
 use hserver::testironfile;
 

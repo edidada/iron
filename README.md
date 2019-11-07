@@ -143,3 +143,8 @@ https://github.com/rust-lang/book
 
 https://wiki.jikexueyuan.com/project/rust-primer/module/module.html
 
+`curl 127.0.0.1:3000`
+
+
+### crate
+在main.rs中引用，不要在其他mod中引用
