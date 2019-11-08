@@ -3,7 +3,7 @@ name = "testiron"
 version = "0.1.0"
 authors = ["sandisks <sandisks555@gmail.com>"]
 
-description = "Extensible, Concurrency Focused Web Development in Rust."
+description = "My Web Site"
 license = "MIT"
 
 [dependencies]
