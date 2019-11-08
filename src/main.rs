@@ -32,8 +32,6 @@ fn main() {
 //    router.get("/", hello_world,"handler");
 //    router.post("/set", set_greeting,"post");
 //
-//
-//
 //    Iron::new(router).http("localhost:3000").unwrap();
 //
 //    fn hello_world(_: &mut Request) -> IronResult<Response> {
