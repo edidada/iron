@@ -7,8 +7,7 @@ mod tests {
 
     #[test]
     fn string_test() {
-        let mut s = String::new();
-
+        let mut s = String::new();//String不用引用，默认在std::路径下
 
         let data = "initial contents";
 

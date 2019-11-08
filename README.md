@@ -141,10 +141,19 @@ https://github.com/rust-lang/book
 'cargo test --test integration_test'
 
 
-https://wiki.jikexueyuan.com/project/rust-primer/module/module.html
+[包和模块](https://wiki.jikexueyuan.com/project/rust-primer/module/module.html)
 
 `curl 127.0.0.1:3000`
+
+`mod.rs`
 
 
 ### crate
 在main.rs中引用，不要在其他mod中引用
+
+main.rs、lib.rs、mod.rs中的mod xxx; 默认优先查找同级目录下的 xxx.rs 文件。
+
+单元测试，目前只有一个文件夹
+
+ 个人感觉最大的问题在于没能搞懂 Rust 的所有权、引用借用和生命周期三个方面。
+
