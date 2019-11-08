@@ -2,12 +2,10 @@ extern crate iron;
 extern crate router;
 extern crate rustc_serialize;
 
-
 mod hserver;
 use hserver::testironfile;
 
 mod methodsee;//引用methodsee.rs文件
-
 
 use iron::prelude::*;
 use iron::status;
