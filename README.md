@@ -156,4 +156,7 @@ main.rs、lib.rs、mod.rs中的mod xxx; 默认优先查找同级目录下的 xxx
 单元测试，目前只有一个文件夹
 
  个人感觉最大的问题在于没能搞懂 Rust 的所有权、引用借用和生命周期三个方面。
+`cargo run --color=always --package testiron --bin testiron`
 
+iron 0.4.0
+0.6.0两个版本
