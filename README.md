@@ -1,13 +1,19 @@
 # iron
 
-[](https://dev.kriry.com/www/rust/std/)
+[Rust std](https://dev.kriry.com/www/rust/std/)
 
 [Rust Crates 镜像使用帮助](https://lug.ustc.edu.cn/wiki/mirrors/help/rust-crates)
 
 官方示例
 
-
+### Linux
 Linux edidada 4.13.0-32-generic #35~16.04.1-Ubuntu SMP Thu Jan 25 10:13:43 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
+
+```jshelllanguage
+rustc -V
+cargo -V
+rustup -V
+```
 
 ```shell
 
@@ -20,6 +26,34 @@ cargo 0.24.0 (45043115c 2017-12-05)
 rustup -V
 rustup 1.14.0 (1e51b07cc 2018-10-04)
 
+```
+
+### Windows
+
+```jshelllanguage
+rustc -V
+rustc 1.34.0 (91856ed52 2019-04-10)
+
+cargo -V
+cargo 1.34.0 (6789d8a0a 2019-04-01)
+
+rustup -V
+rustup 1.20.2 (13979c968 2019-10-16)
+
+```
+
+### Mac
+
+```
+rustc -V
+rustc 1.34.1 (fc50f328b 2019-04-24)
+cargo -V
+cargo 1.34.0 (6789d8a0a 2019-04-01)
+rustup -V
+rustup 1.18.2 (a0bf3c9cb 2019-05-02)
+```
+
+```
 
 cargo test
 cargo doc
@@ -103,6 +137,7 @@ Rust不提供原生类型之间的隐式转换，只能使用as关键字显式�
 Rust 里面有两种字符串类型。String 和 str。
 str 类型基本上不怎么使用，通常使用 &str 类型，它其实是 [u8] 类型的切片形式 &[u8]。这是一种固定大小的字符串类型。 常见的的字符串字面值就是 &'static str 类型。这是一种带有 'static 生命周期的 &str 类型。
 
+to_string();
 
 String
 String 是一个带有的 vec:Vec<u8> 成员的结构体，你可以理解为 str 类型的动态形式。 它们的关系相当于 [T] 和 Vec<T> 的关系。 显然 String 类型也有压入和弹出。
@@ -122,7 +157,7 @@ cargo install 是把可执行文件复制到cargo/bin文件夹下面
 
 [rust使用外部函数](https://blog.csdn.net/teamlet/article/details/50923682)
 
-iron依赖hyper
+iron依赖hyper router
 
 [rust doc](https://doc.rust-lang.org/rustc/what-is-rustc.html)
 
@@ -138,6 +173,7 @@ https://rustwiki.org/zh-CN/rust-by-example/mod/visibility.html
 
 https://github.com/rust-lang/book
 
+集成测试
 'cargo test --test integration_test'
 
 
@@ -149,7 +185,7 @@ https://github.com/rust-lang/book
 
 
 ### crate
-在main.rs中引用，不要在其他mod中引用
+在main.rs中引用，不要在其他mod中引用,在其他mod中引用，会找不到自定义的mod
 
 main.rs、lib.rs、mod.rs中的mod xxx; 默认优先查找同级目录下的 xxx.rs 文件。
 
@@ -165,3 +201,20 @@ rust http框架 iron是同步的
 https://zhuanlan.zhihu.com/p/51497950
 
 impl Rust关键字
+iron 0.4.0 0.6.0两个版本 多包依赖冲突
+
+
+rust 常用类型转换
+https://www.jianshu.com/p/7b4a74856cdd
+
+# todo
+
+- 自定义类型 enum struct
+- 跨文件调用 搞定
+- map,unit test
+- 跨mod调用
+- 多线程
+- rustc
+
+
+https://kaisery.github.io/trpl-zh-cn/ch08-03-hash-maps.html

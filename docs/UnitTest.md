@@ -12,4 +12,6 @@ assert!(expression) - 如果表达式的值是 false 则 panic。
 assert_eq!(left, right) 和 assert_ne!(left, right) - 检验左右两边是否 相等/不等。
 
 test vector
-https://kaisery.github.io/trpl-zh-cn/ch08-01-vectors.htm
+https://kaisery.github.io/trpl-zh-cn/ch08-01-vectors.html
+
+Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.

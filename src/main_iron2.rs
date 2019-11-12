@@ -12,12 +12,12 @@ use router::{Router};
 fn main() {
     let mut router = Router::new();
     router.get("/", handler, "handler");
-    router.get("/:query", query_handler, "query_handler");
+    router.get("/:query", query_handler, "query_handler");//localhost:3000/set query是set
 
     Iron::new(router).http("localhost:3000").unwrap();
 
     fn handler(_: &mut Request) -> IronResult<Response> {
-        Ok(Response::with((status::Ok, "OK")))
+        Ok(Response::with((status::Ok, "OK this is my message")))
     }
 
     fn query_handler(req: &mut Request) -> IronResult<Response> {
