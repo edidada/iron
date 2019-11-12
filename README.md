@@ -199,3 +199,6 @@ https://www.jianshu.com/p/7b4a74856cdd
 - 跨mod调用
 - 多线程
 - rustc
+
+
+https://kaisery.github.io/trpl-zh-cn/ch08-03-hash-maps.html
