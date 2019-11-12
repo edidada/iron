@@ -190,3 +190,12 @@ iron 0.4.0 0.6.0两个版本 多包依赖冲突
 
 rust 常用类型转换
 https://www.jianshu.com/p/7b4a74856cdd
+
+# todo
+
+- 自定义类型 enum struct
+- 跨文件调用 搞定
+- map,unit test
+- 跨mod调用
+- 多线程
+- rustc
