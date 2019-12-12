@@ -19,7 +19,7 @@ mod tests {
     }
 
     //rust 在声明变量时，在变量前面加入 mut 关键字，变量就会成为可变绑定的变量。
-    fn test_mut() {
+    fn test_muts() {
         let mut a: f64 = 1.0;
         let b = 2.0f32;
 
@@ -353,7 +353,7 @@ mod tests {
 
     #[test]
     fn while_with_iter(){
-        let a = [10, 20, 30, 40, 50];
+        let a :[i32;5] = [10, 20, 30, 40, 50];
 
         for element in a.iter() {
             println!("the value is: {}", element);
@@ -368,4 +368,11 @@ mod tests {
         println!("LIFTOFF!!!");
     }
 
+    #[test]
+    fn test_mut(){
+        let mut x = 5;
+        println!("The value of x is: {}", x);
+        x = 6;
+        println!("The value of x is: {}", x);
+    }
 }
