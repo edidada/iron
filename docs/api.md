@@ -34,3 +34,9 @@ Headers::new()
 use typemap::TypeMap;
 
 TypeMap::new()
+
+
+
+## syntax
+
+#[derive(Debug)]
