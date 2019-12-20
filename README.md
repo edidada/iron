@@ -45,6 +45,15 @@ rustup 1.20.2 (13979c968 2019-10-16)
 ### Mac
 
 ```
+rustc -V
+rustc 1.34.1 (fc50f328b 2019-04-24)
+cargo -V
+cargo 1.34.0 (6789d8a0a 2019-04-01)
+rustup -V
+rustup 1.18.2 (a0bf3c9cb 2019-05-02)
+```
+
+```
 
 cargo test
 cargo doc
@@ -185,6 +194,13 @@ main.rs、lib.rs、mod.rs中的mod xxx; 默认优先查找同级目录下的 xxx
  个人感觉最大的问题在于没能搞懂 Rust 的所有权、引用借用和生命周期三个方面。
 `cargo run --color=always --package testiron --bin testiron`
 
+iron 同时引入0.4.0
+0.6.0两个版本，报错
+
+rust http框架 iron是同步的
+https://zhuanlan.zhihu.com/p/51497950
+
+impl Rust关键字
 iron 0.4.0 0.6.0两个版本 多包依赖冲突
 
 
