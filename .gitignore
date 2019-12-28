@@ -1,4 +1,8 @@
-
 /target/
-/.idea/
+.idea/*
 **/*.rs.bk
+**/*.iml
+*.iml
+*/target/
+Cargo.lock
+*/Cargo.lock

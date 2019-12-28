@@ -3,6 +3,19 @@ name = "testiron"
 version = "0.1.0"
 authors = ["sandisks <sandisks555@gmail.com>"]
 
+description = "My Web Site"
+license = "MIT"
+
 [dependencies]
-iron = "0.6.*"
+iron = "0.6.0"
 time = "0.1.40"
+#mysql_async = "0.19.0"
+rustc-serialize = "0.3.24"
+router = "0.6.0"
+log = "0.4.0"
+env_logger = "0.7.1"
+
+[lib]
+name = "adder"
+path = "adder/src/lib.rs"
+
