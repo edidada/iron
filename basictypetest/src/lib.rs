@@ -1,5 +1,71 @@
+pub fn add_two(a: i32) -> i32 {
+    internal_adder(a, 2)
+}
+
+fn internal_adder(a: i32, b: i32) -> i32 {
+    a + b
+}
+
 #[cfg(test)]
 mod tests {
+
+    use super::*;
+
+    #[test]
+    fn internal() {
+        assert_eq!(4, internal_adder(2, 2));
+    }
+
+    #[test]
+    fn test_string_copy(){
+        let x = 5;
+        let y = x;
+
+        println!("x: {}, y: {}!", x,y);
+
+        let s1 = String::from("hello");
+        let s2 = s1;
+
+//        println!("{}, world!", s1);//^^ value borrowed here after move
+
+//        = note: move occurs because `s1` has type `std::string::String`, which doesnot implement the `Copy` trait
+    }
+
+    #[test]
+    fn test_string_clone(){
+        let s1 = String::from("hello");
+        let s2 = s1.clone();
+
+        println!("s1 = {}, s2 = {}", s1, s2);
+    }
+
+
+    #[test]
+    fn mains() {
+        let s = String::from("hello");  // s comes into scope
+
+        takes_ownership(s);             // s's value moves into the function...
+        // ... and so is no longer valid here
+
+        let x = 5;                      // x comes into scope
+
+        makes_copy(x);                  // x would move into the function,
+        // but i32 is Copy, so it’s okay to still
+        // use x afterward
+
+    } // Here, x goes out of scope, then s. But because s's value was moved, nothing
+    // special happens.
+
+    fn takes_ownership(some_string: String) { // some_string comes into scope
+        println!("{}", some_string);
+    } // Here, some_string goes out of scope and `drop` is called. The backing
+    // memory is freed.
+
+    fn makes_copy(some_integer: i32) { // some_integer comes into scope
+        println!("{}", some_integer);
+    } // Here, some_integer goes out of scope. Nothing special happens.
+
+
     #[test]
     fn it_works() {
         assert_eq!(2 + 2, 4);
@@ -160,18 +226,18 @@ mod tests {
         let mut a : i64 =-4;
         assert_eq!(2 - 6, a);
 
-        let x = 2.0; // f64
+        let x : f64 = 2.0; // f64
 
         let y: f32 = 3.0; // f32
 
         // addition
-        let sum = 5 + 10;
+        let sum : i32 = 5 + 10;
 
         // subtraction
-        let difference = 95.5 - 4.3;
+        let difference : f64 = 95.5 - 4.3;
 
         // multiplication
-        let product = 4 * 30;
+        let product : i32 = 4 * 30;
 
         // division
         let quotient = 56.7 / 32.2;
@@ -195,23 +261,29 @@ mod tests {
     fn tuple_test() {
         let x: (i32, f64, u8) = (500, 6.4, 1);
 
-        let five_hundred = x.0;
+        let five_hundred : i32 = x.0;
 
         let six_point_four = x.1;
 
         let one = x.2;
+
+//        println!(five_hundred);// error: format argument must be a string literal
+
+//        println!(five_hundred.to_string());
+        println!("{}", five_hundred.to_string());//为什么下面可以？
+        println!("Hello, world!");
     }
 
     #[test]
     fn array_test() {
-        let a = [1, 2, 3, 4, 5];
+//        let a = [1, 2, 3, 4, 5];
+        let a : [i32;5] = [1, 2, 3, 4, 5];
 
 
         let first = a[0];
         let second = a[1];
 
-        let months = ["January", "February", "March", "April", "May", "June", "July",
-            "August", "September", "October", "November", "December"];
+        let months: [&str;12] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];//mismatched types [E0308] expected `[&str; 11]`, found `[&str; 12]`
         let bb: [i32; 5] = [1, 2, 3, 4, 5];
 
         let cc = [3; 5];
@@ -262,6 +334,9 @@ mod tests {
         println!("{}",x);
 
         plus_one(1);
+        plus_one(x);
+
+        println!("{}",x);
     }
 
     fn five() -> i32 {
@@ -282,7 +357,7 @@ mod tests {
             println!("condition was false");
         }
 
-//        if number {//error[E0308]
+//        if number {//error[E0308]:println!("{}",x);
 //            println!("number was three");
 //        }
 
@@ -313,9 +388,9 @@ mod tests {
 
     #[test]
     fn loop_test(){
-        let mut counter = 0;
+        let mut counter: i32 = 0;
 
-        let result = loop {
+        let result : i32 = loop {
             counter += 1;
 
             if counter == 10 {
@@ -328,7 +403,7 @@ mod tests {
 
     #[test]
     fn while_test(){
-        let mut number = 3;
+        let mut number: i32 = 3;
 
         while number != 0 {
             println!("{}!", number);
@@ -337,12 +412,13 @@ mod tests {
         }
 
         println!("LIFTOFF!!!");
+        println!("The number is {}", number);
     }
 
     #[test]
     fn while_test_2(){
-        let a = [10, 20, 30, 40, 50];
-        let mut index = 0;
+        let a:[i32;5] = [10, 20, 30, 40, 50];
+        let mut index: usize = 0;
 
         while index < 5 {
             println!("the value is: {}", a[index]);

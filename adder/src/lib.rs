@@ -98,11 +98,11 @@ fn  function            (i: i32) -> i32 { i + 1 }
     }
 
     #[test]
-    fn test_vvvvv(){
+    fn test_range(){
         let aaaaaaaaa = vec![1, 2, 3, 4, 5];
 
-        let does_not_exist = &aaaaaaaaa[100];
-        let does_not_exist = aaaaaaaaa.get(100);
+//        let does_not_exist : &i32 = &aaaaaaaaa[100];
+//        let does_not_exist :Option<&i32> = aaaaaaaaa.get(100);
 
 
 

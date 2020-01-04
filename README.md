@@ -1,5 +1,7 @@
 # iron
 
+idea + Rust插件可以添加module
+
 [Rust std](https://dev.kriry.com/www/rust/std/)
 
 [Rust Crates 镜像使用帮助](https://lug.ustc.edu.cn/wiki/mirrors/help/rust-crates)
@@ -9,7 +11,7 @@
 ### Linux
 Linux edidada 4.13.0-32-generic #35~16.04.1-Ubuntu SMP Thu Jan 25 10:13:43 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
 
-```jshelllanguage
+```shell
 rustc -V
 cargo -V
 rustup -V
@@ -73,6 +75,8 @@ registry = "git://mirrors.ustc.edu.cn/crates.io-index"
 idea clion version 2018.2
 
 rust plugin version 0.2.0.20
+
+rust http方案 iron不好，使用Rocket
 
 操作，在项目对应的文件夹下运行“cargo run”。
 打开浏览器访问 http://localhost:3000/ 显示：This Is Rust Http Server
@@ -147,7 +151,7 @@ String 是一个带有的 vec:Vec<u8> 成员的结构体，你可以理解为 st
 
 ```shell
 
-/home/edidada/.cargo/bin/cargo run
+cargo run
 
 ```
 
@@ -168,10 +172,9 @@ Box<[T]> - 拥有切片
 
 pub	使其可见
 
+[通过例子学 Rust](https://rustwiki.org/zh-CN/rust-by-example/mod/visibility.html)
 
-https://rustwiki.org/zh-CN/rust-by-example/mod/visibility.html
-
-https://github.com/rust-lang/book
+[rust-lang book](https://github.com/rust-lang/book)
 
 集成测试
 'cargo test --test integration_test'
@@ -197,8 +200,8 @@ main.rs、lib.rs、mod.rs中的mod xxx; 默认优先查找同级目录下的 xxx
 iron 同时引入0.4.0
 0.6.0两个版本，报错
 
-rust http框架 iron是同步的
-https://zhuanlan.zhihu.com/p/51497950
+[rust http框架 iron是同步的](https://zhuanlan.zhihu.com/p/51497950)
+
 
 impl Rust关键字
 iron 0.4.0 0.6.0两个版本 多包依赖冲突
@@ -206,6 +209,21 @@ iron 0.4.0 0.6.0两个版本 多包依赖冲突
 
 rust 常用类型转换
 https://www.jianshu.com/p/7b4a74856cdd
+
+```shell script
+   Compiling humantime v1.3.0
+error: failed to run custom build command for `pear_codegen v0.1.2`
+
+Caused by:
+  process didn't exit successfully: `/home/edidada/CLionProjects/testiron/rockettests/target/debug/build/pear_codegen-f22f7c4f6a08f969/build-script-build` (exit code: 101)
+--- stderr
+Error: Pear requires a nightly or dev version of Rust.
+Installed version is: 1.40.0 (2019-12-16). Minimum required: 1.31.0-nightly (2018-10-05).
+```
+
+`rustup default nightly`
+`rustup default stable`
+
 
 # todo
 
@@ -216,12 +234,13 @@ https://www.jianshu.com/p/7b4a74856cdd
 - 多线程
 - rustc
 
-
-https://kaisery.github.io/trpl-zh-cn/ch08-03-hash-maps.html
+[Rust 程序设计语言 简体中文版](https://kaisery.github.io/trpl-zh-cn/ch08-03-hash-maps.html)
 
 
 
 Compiling rockettest v0.1.0 (D:\git\github\testiron\rockettest)
 error[E0658]: use of unstable library feature 'rustc_private': this crate is being loaded from the sysroot, an unstable location; did you mean to load this crate from crates.io via `Cargo.toml` instead?
 
+
+Linux Rust clion 没有新建模块
 
