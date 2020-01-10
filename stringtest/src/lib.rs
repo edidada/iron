@@ -1,8 +1,22 @@
+//https://kaisery.github.io/trpl-zh-cn/ch08-02-strings.html
+
 #[cfg(test)]
 mod tests {
+
+    #![allow(unused_variables)]
     #[test]
     fn it_works() {
-        assert_eq!(2 + 2, 4);
+        let hello = String::from("السلام عليكم");
+        let hello = String::from("Dobrý den");
+        let hello = String::from("Hello");
+        let hello = String::from("שָׁלוֹם");
+        let hello = String::from("नमस्ते");
+        let hello = String::from("こんにちは");
+        let hello = String::from("안녕하세요");
+        let hello = String::from("你好");
+        let hello = String::from("Olá");
+        let hello = String::from("Здравствуйте");
+        let hello = String::from("Hola");
     }
 
     #[test]
@@ -32,4 +46,156 @@ mod tests {
         s1.push_str(s2);
         println!("s2 is {}", s2);
     }
+
+    #[test]
+    fn string_add(){
+
+        let s1 = String::from("Hello, ");
+        let s2 = String::from("world!");
+        let s3 = s1 + &s2; // 注意 s1 被移动了，不能继续使用
+
+        println!("s3 is {}", s3);
+
+    }
+
+
+    #[test]
+    fn a(){
+        let s1 = String::from("tic");
+        let s2 = String::from("tac");
+        let s3 = String::from("toe");
+
+        let s = s1 + "-" + &s2 + "-" + &s3;
+
+        println!("s is {}", s);
+    }
+
+
+    #[test]
+    fn test_string_format(){
+
+        let s1 = String::from("tic");
+        let s2 = String::from("tac");
+        let s3 = String::from("toe");
+
+        let s = format!("{}-{}-{}", s1, s2, s3);
+        println!("s is {}", s);
+    }
+
+
+    #[test]
+    fn abcs(){
+
+    }
+
+
+    #[test]
+    fn asdbc(){
+
+    }
+
+
+
+
+    #[test]
+    fn abfdfc(){
+
+    }
+
+
+
+
+    #[test]
+    fn abcfdf(){
+
+    }
+
+
+
+
+    #[test]
+    fn afdsfdsfsbc(){
+
+    }
+
+
+
+
+    #[test]
+    fn abfdsddc(){
+
+    }
+
+
+
+
+    #[test]
+    fn abddddsssc(){
+
+    }
+
+
+
+
+    #[test]
+    fn abaaaaac(){
+
+    }
+
+
+
+    #[test]
+    fn afdfdsbc(){
+
+    }
+
+
+
+    #[test]
+    fn abgfdgsc(){
+
+    }
+
+
+
+    #[test]
+    fn abgsdffdgc(){
+
+    }
+
+
+
+    #[test]
+    fn abgsdfgc(){
+
+    }
+
+
+
+    #[test]
+    fn abgfgsdc(){
+
+    }
+
+
+
+    #[test]
+    fn absgdfc(){
+
+    }
+
+
+
+    #[test]
+    fn agdfbc(){
+
+    }
+
+
+
+
+
+
+
+
 }

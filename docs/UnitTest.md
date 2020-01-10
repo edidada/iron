@@ -1,4 +1,9 @@
 # Unit Test
+cd ../basictypetest/
+`cargo test -- --test-threads=1`
+
+### basictypetest模块
+
 是不是只能有一个测试文件？lib.rs 目前看是这样
 https://doc.rust-lang.org/book/testing.html
 https://kaisery.github.io/trpl-zh-cn/ch11-03-test-organization.html
