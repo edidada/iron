@@ -5,4 +5,5 @@
 *.iml
 */target/
 Cargo.lock
+**/Cargo.lock
 */Cargo.lock
