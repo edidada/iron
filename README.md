@@ -234,6 +234,17 @@ Installed version is: 1.40.0 (2019-12-16). Minimum required: 1.31.0-nightly (201
 - 跨mod调用
 - 多线程
 - rustc
+- cargo
+- llvm
+- llvm ir
+- servo
+- rust-analysis-x86_64-apple-darwin
+- llvm-tools-preview-x86_64-apple-darwin
+
+Rust 程序设计语言 简体中文版
+https://kaisery.github.io/trpl-zh-cn/ch08-03-hash-maps.html
+
+https://doc.rust-lang.org/reference/index.html
 
 [Rust 程序设计语言 简体中文版](https://kaisery.github.io/trpl-zh-cn/ch08-03-hash-maps.html)
 
