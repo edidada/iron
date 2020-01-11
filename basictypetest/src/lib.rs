@@ -200,13 +200,13 @@ mod tests {
 
     fn teststr(){
         // 字符串字面值
-        let hello = "Hello, world!";
+        let hello : &str = "Hello, world!";
 
 // 附带显式类型标识
         let hello: &'static str = "Hello, world!";
 
         // 创建一个空的字符串
-        let mut s = String::new();
+        let mut s : String = String::new();
 // 从 `&str` 类型转化成 `String` 类型
         let mut hello = String::from("Hello, ");
 // 压入字符和压入字符串切片
@@ -214,7 +214,7 @@ mod tests {
         hello.push_str("orld!");
 
 // 弹出字符。
-        let mut s = String::from("foo");
+        let mut s : String = String::from("foo");
         assert_eq!(s.pop(), Some('o'));
         assert_eq!(s.pop(), Some('o'));
         assert_eq!(s.pop(), Some('f'));
@@ -240,18 +240,18 @@ mod tests {
         let product : i32 = 4 * 30;
 
         // division
-        let quotient = 56.7 / 32.2;
+        let quotient : f64 = 56.7 / 32.2;
 
         // remainder
-        let remainder = 43 % 5;
+        let remainder: i32 = 43 % 5;
 
-        let t = true;
+        let t:bool = true;
 
         let f: bool = false; // with explicit type annotation
 
-        let c = 'z';
-        let z = 'ℤ';
-        let heart_eyed_cat = '😻';
+        let c:char = 'z';
+        let z:char = 'ℤ';
+        let heart_eyed_cat:char = '😻';
 
 
         let tup: (i32, f64, u8) = (500, 6.4, 1);//The Tuple Type
@@ -263,9 +263,9 @@ mod tests {
 
         let five_hundred : i32 = x.0;
 
-        let six_point_four = x.1;
+        let six_point_four:f64 = x.1;
 
-        let one = x.2;
+        let one:u8 = x.2;
 
 //        println!(five_hundred);// error: format argument must be a string literal
 
@@ -280,13 +280,13 @@ mod tests {
         let a : [i32;5] = [1, 2, 3, 4, 5];
 
 
-        let first = a[0];
-        let second = a[1];
+        let first :i32 = a[0];
+        let second :i32 = a[1];
 
         let months: [&str;12] = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];//mismatched types [E0308] expected `[&str; 11]`, found `[&str; 12]`
         let bb: [i32; 5] = [1, 2, 3, 4, 5];
 
-        let cc = [3; 5];
+        let cc : [i32;5] = [3; 5];//;表示重复
     }
 
     #[test]

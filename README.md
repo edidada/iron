@@ -224,6 +224,7 @@ Installed version is: 1.40.0 (2019-12-16). Minimum required: 1.31.0-nightly (201
 `rustup default nightly`
 `rustup default stable`
 
+变量名不能加:
 
 # todo
 
@@ -255,4 +256,13 @@ error[E0658]: use of unstable library feature 'rustc_private': this crate is bei
 
 Linux Rust clion 没有新建模块
 
+```shell script
 
+cargo test --color=always --no-run --package basictypetest --lib tests::mys -- --exact
+cargo test --package basictypetest --lib tests::mys
+cargo test --package basictypetest
+cargo test
+cd ../generictype/
+cargo test
+
+```
