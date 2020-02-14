@@ -266,3 +266,5 @@ cd ../generictype/
 cargo test
 
 ```
+
+https://rustcc.gitbooks.io/rustprimer/content/
