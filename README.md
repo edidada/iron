@@ -271,3 +271,4 @@ cargo test --package
 泛型的性能
 
 trait trait定义共享的行为
+https://rustcc.gitbooks.io/rustprimer/content/
