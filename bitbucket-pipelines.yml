@@ -11,3 +11,9 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - cargo build -v
           - cargo test -v
+          - cd basictypetest
+          - cargo test --color=always --no-run --package basictypetest --lib tests::mys -- --exact
+          - cargo test --package basictypetest --lib tests::mys
+          - cargo test --package basictypetest
+          - cd ../generictype/
+          - cargo test

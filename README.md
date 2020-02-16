@@ -241,8 +241,6 @@ Installed version is: 1.40.0 (2019-12-16). Minimum required: 1.31.0-nightly (201
 - rust-analysis-x86_64-apple-darwin
 - llvm-tools-preview-x86_64-apple-darwin
 
-Rust 程序设计语言 简体中文版
-https://kaisery.github.io/trpl-zh-cn/ch08-03-hash-maps.html
 
 https://doc.rust-lang.org/reference/index.html
 
@@ -257,12 +255,19 @@ error[E0658]: use of unstable library feature 'rustc_private': this crate is bei
 Linux Rust clion 没有新建模块
 
 ```shell script
-
+cd basictypetest
 cargo test --color=always --no-run --package basictypetest --lib tests::mys -- --exact
 cargo test --package basictypetest --lib tests::mys
 cargo test --package basictypetest
 cargo test
 cd ../generictype/
-cargo test
+cargo test --package
 
 ```
+
+- 结构体定义中的泛型
+- 枚举
+- 方法
+泛型的性能
+
+trait trait定义共享的行为
